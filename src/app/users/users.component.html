@@ -1,0 +1,27 @@
+
+<div class="container">
+    <div class="d-flex justify-content-center pt-4">
+        <p>Tabla de Usuarios</p>
+    </div>
+    <table class="table table-hover centered responsive-table" id="usersTable">
+        <thead class="thead-dark">
+          <tr>
+            <th *ngFor="let col of columns">
+                {{col}}
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td>{{user.name}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.address}}</td>
+                <td>{{user.phone}}</td>
+                <td>{{user.birthday | date:'yyyy-MM-dd'}}</td>
+                <td>{{user.age}}</td>
+                <td class="flow-text text-center"><button class="btn-floating btn-small waves-effect waves-light white" routerLink = "update/{{user.id}}"><i class="material-icons purple-text">edit</i></button></td>
+                <td class="flox-text text-center"><button class="btn-floating btn-small waves-effect waves-light white" (click)="deleteUser(user)"><i class="material-icons red-text">delete</i></button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
