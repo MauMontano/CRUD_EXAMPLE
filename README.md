@@ -1,27 +1,31 @@
-# Clientapp
+# CRUD_EXAMPLE
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
+Este proyecto consiste en un CRUD sencillo de usuarios basado en la arquitectura API REST, en el que es posible consultar una tabla de usuarios(previamente registrados en una base de datos), modificar sus datos y eliminarlos. 
 
-## Development server
+Por otro lado, la programación del proyecto se realizo con Angular para la parte del cliente o frontend, y con NodeJS para la parte del servidor o backend.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Finalmente, la base de datos implementada es de tipo relacional, y se encuentra alojada en Google Cloud Plattform. A continuación se menciona como ejecutar la aplicación
 
-## Code scaffolding
+## Servidor
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Es la primera instancia que debe de ejecutarse para poder usar la aplicación. Los pasos para ejecutarlo son los siguientes:
 
-## Build
+  1. Debido a que la base de datos se encuentra en un servidor remoto, deberá solicitar al autor del repositorio el archivo `.env`, el cual contiene las credenciales de conexión. Este archivo deberá colocarse en la raíz de la carpeta `backapp`.
+ 
+  2. **Instalar los `node_modules`**: Deberá posicionarse en la carpeta backapp, una vez ahí deberá ejecutar el comando `npm install`.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+  3. **Ejecutar el servidor**: Ejecutar el comando `nodemon start`.
 
-## Running unit tests
+  4. Para verificar que el servidor se está ejecutando correctamente, deberá revisar su consola, la cual deberá desplegar un mensaje que ilustre que el servidor se está ejecutando en el puerto 3000.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Cliente
 
-## Running end-to-end tests
+El cliente deberá de ejecutarse una vez que ya se esté ejecutando el servidor para evitar errores. Los pasos para ejecutar esta instancia son:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+  1. **Instalar los `node_modules`**: Deberá posicionarse en la carpeta raíz del repositorio, una vez ahí deberá ejecutar el comando `npm install`.
 
-## Further help
+  2. **Ejecutar la aplicación**: Deberá posicionarse en la carpeta raíz del repositorio, una vez ahí deberá ejecutar el comando `ng serve`.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+  3. Acceder desde su navegador a `http://localhost:4200/`.
+
+  4. Listo ! la aplicación ya está ejecutándose.
