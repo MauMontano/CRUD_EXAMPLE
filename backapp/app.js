@@ -1,5 +1,5 @@
-require('dotenv').config();
-console.log(process.env);
+require('dotenv').config();//
+//console.log(process.env);
 var createError = require('http-errors');
 var express = require('express');
 var cors = require ('cors');
@@ -23,6 +23,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
+
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
